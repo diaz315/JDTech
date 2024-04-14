@@ -865,4 +865,17 @@
   gtag('js', new Date());
 
   gtag('config', 'G-4WVCGM42S0');
+
+const buttonElements = document.querySelectorAll('[id^="contact_"]');  // Selects all elements with IDs starting with "mi_boton_"
+
+buttonElements.forEach(button => {
+    button.addEventListener('click', function() {
+        const buttonName = this.id.split('_')[1];  // Extracts the part after "mi_boton_"
+        gtag('event', 'boton_whatsapp_clic_' + buttonName, {
+            'event_category': 'Botones',
+            'event_action': 'clic',
+            'event_label': buttonName
+        });
+    });
+});
 </script>
