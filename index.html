@@ -871,7 +871,7 @@ const buttonElements = document.querySelectorAll('[id^="contact_"]');  // Select
 buttonElements.forEach(button => {
     button.addEventListener('click', function() {
         const buttonName = this.id.split('_')[1];  // Extracts the part after "mi_boton_"
-        gtag('event', 'boton_whatsapp_clic_' + buttonName, {
+        gtag('event', 'boton_whatsapp_clic', {
             'event_category': 'Botones',
             'event_action': 'clic',
             'event_label': buttonName
